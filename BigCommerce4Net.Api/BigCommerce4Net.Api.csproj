@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAD102C5-A4DC-4C60-AF60-5777B051C386}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BigCommerce4Net.Api</RootNamespace>
+    <AssemblyName>BigCommerce4Net.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client\Client.cs" />
+    <Compile Include="Interfaces\IChildResourceGet.cs" />
+    <Compile Include="Interfaces\IChildResourceGetUpdate.cs" />
+    <Compile Include="Interfaces\IChildResourceGetUpdateDelete.cs" />
+    <Compile Include="Interfaces\IChildResourceGetUpdateDeleteCreate.cs" />
+    <Compile Include="Interfaces\IParentResourceCount.cs" />
+    <Compile Include="Interfaces\IParentResourceGet.cs" />
+    <Compile Include="Interfaces\IParentResourceGetUpdate.cs" />
+    <Compile Include="Interfaces\IParentResourceGetUpdateDelete.cs" />
+    <Compile Include="Interfaces\IParentResourceGetUpdateDeleteCreate.cs" />
+    <Compile Include="Interfaces\IChildResourceCount.cs" />
+    <Compile Include="Client\Products\ClientBrands.cs" />
+    <Compile Include="Client\Products\ClientCategories.cs" />
+    <Compile Include="Client\Countries\ClientCountries.cs" />
+    <Compile Include="Client\Customers\ClientCustomersAddresses.cs" />
+    <Compile Include="Client\Orders\ClientOrders.cs" />
+    <Compile Include="Client\Orders\ClientOrdersCoupons.cs" />
+    <Compile Include="Client\Orders\ClientOrdersProducts.cs" />
+    <Compile Include="Client\Orders\ClientOrdersShipments.cs" />
+    <Compile Include="Client\Orders\ClientOrdersShippingAddresses.cs" />
+    <Compile Include="Client\Orders\ClientOrderStatuses.cs" />
+    <Compile Include="Client\Options\ClientOptions.cs" />
+    <Compile Include="Client\Options\ClientOptionSet.cs" />
+    <Compile Include="Client\Options\ClientOptionSetOption.cs" />
+    <Compile Include="Client\Options\ClientOptionValue.cs" />
+    <Compile Include="Client\Coupons\ClientCoupons.cs" />
+    <Compile Include="Client\Products\ClientProductsOptions.cs" />
+    <Compile Include="Client\Products\ClientProductsSkus.cs" />
+    <Compile Include="Client\Products\ClientProductsRules.cs" />
+    <Compile Include="Client\Products\ClientProductsImages.cs" />
+    <Compile Include="Client\Products\ClientProductsConfigurableFields.cs" />
+    <Compile Include="Client\Products\ClientProducts.cs" />
+    <Compile Include="Client\Products\ClientProductsDiscountRules.cs" />
+    <Compile Include="Client\Products\ClientProductsCustomFields.cs" />
+    <Compile Include="Client\Products\ClientProductsVideo.cs" />
+    <Compile Include="Client\Utilities\ClientRequestLogs.cs" />
+    <Compile Include="Client\Countries\ClientStates.cs" />
+    <Compile Include="Client\Orders\ClientShippingMethods.cs" />
+    <Compile Include="Client\Utilities\ClientUtilities.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Client\ClientBase.cs" />
+    <Compile Include="Client\Customers\ClientCustomers.cs" />
+    <Compile Include="Interfaces\IParentResourcePaging.cs" />
+    <Compile Include="Deserializers\NewtonSoftJsonDeserializer.cs" />
+    <Compile Include="Exceptions\HttpServerException.cs" />
+    <Compile Include="ExtensionMethods\MyExtensions.cs" />
+    <Compile Include="Filters\Filter.cs" />
+    <Compile Include="Filters\Coupons\FilterCoupons.cs" />
+    <Compile Include="Filters\Products\FilterBrands.cs" />
+    <Compile Include="Filters\Products\FilterCategories.cs" />
+    <Compile Include="Filters\Countries\FilterCountries.cs" />
+    <Compile Include="Filters\Customers\FilterCustomers.cs" />
+    <Compile Include="Filters\Orders\FilterOrders.cs" />
+    <Compile Include="Filters\Options\FilterOptions.cs" />
+    <Compile Include="Filters\Products\FilterProducts.cs" />
+    <Compile Include="Filters\Countries\FilterStates.cs" />
+    <Compile Include="Interfaces\IFilter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Responses\ClientResponse.cs" />
+    <Compile Include="Interfaces\IClientResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BigCommerce4Net.Domain\BigCommerce4Net.Domain.csproj">
+      <Project>{0a8b96c4-4fbe-4772-84aa-0b3d023f2e21}</Project>
+      <Name>BigCommerce4Net.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

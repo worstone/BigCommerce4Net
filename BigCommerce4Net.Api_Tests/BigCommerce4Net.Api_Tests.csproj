@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAD78EB0-9136-4662-9719-D6084F1B0197}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BigCommerce4Net.Api_Tests</RootNamespace>
+    <AssemblyName>BigCommerce4Net.Api_Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Coupons\ClientCoupons_TF.cs" />
+    <Compile Include="Customers\ClientCustomersAddresses_TF.cs" />
+    <Compile Include="Options\ClientOptionSetOption_TF.cs" />
+    <Compile Include="Options\ClientOptions_TF.cs" />
+    <Compile Include="Options\ClientOptionSet_TF.cs" />
+    <Compile Include="Options\ClientOptionValue_TF.cs" />
+    <Compile Include="Orders\ClientOrdersCoupons_TF.cs" />
+    <Compile Include="Orders\ClientOrdersProducts_TF.cs" />
+    <Compile Include="Orders\ClientOrdersShipments_TF.cs" />
+    <Compile Include="Orders\ClientOrdersShippingAddresses_TF.cs" />
+    <Compile Include="Orders\ClientOrderStatuses_TF.cs" />
+    <Compile Include="Products\ClientBrands_TF.cs" />
+    <Compile Include="Countries\ClientCountries_TF.cs" />
+    <Compile Include="Products\ClientCategories_TF.cs" />
+    <Compile Include="Products\ClientProductsConfigurableFields_TF.cs" />
+    <Compile Include="Products\ClientProductsCustomFields_TF.cs" />
+    <Compile Include="Products\ClientProductsDiscountRules_TF.cs" />
+    <Compile Include="Products\ClientProductsImages_TF.cs" />
+    <Compile Include="Products\ClientProductsOptions_TF.cs" />
+    <Compile Include="Products\ClientProductsRules_TF.cs" />
+    <Compile Include="Products\ClientProductsSkus_TF.cs" />
+    <Compile Include="Products\ClientProductsVideo_TF.cs" />
+    <Compile Include="Products\ClientProducts_TF.cs" />
+    <Compile Include="Utilities\ClientRequestLogs_TF.cs" />
+    <Compile Include="Countries\ClientStates_TF.cs" />
+    <Compile Include="Utilities\ClientShippingMethods_TF.cs" />
+    <Compile Include="Utilities\ClientUtilities_TF.cs" />
+    <Compile Include="Customers\ClientCustomers_TF.cs" />
+    <Compile Include="FixtureBase.cs" />
+    <Compile Include="Orders\ClientOrders_TF.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BigCommerce4Net.Api\BigCommerce4Net.Api.csproj">
+      <Project>{dad102c5-a4dc-4c60-af60-5777b051c386}</Project>
+      <Name>BigCommerce4Net.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BigCommerce4Net.Domain\BigCommerce4Net.Domain.csproj">
+      <Project>{0a8b96c4-4fbe-4772-84aa-0b3d023f2e21}</Project>
+      <Name>BigCommerce4Net.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

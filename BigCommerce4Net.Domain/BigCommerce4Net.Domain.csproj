@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A8B96C4-4FBE-4772-84AA-0B3D023F2E21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BigCommerce4Net.Domain</RootNamespace>
+    <AssemblyName>BigCommerce4Net.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Common\Address.cs" />
+    <Compile Include="Entities\EntityBase.cs" />
+    <Compile Include="Entities\Common\Brand.cs" />
+    <Compile Include="Entities\Common\Category.cs" />
+    <Compile Include="Entities\Common\Count.cs" />
+    <Compile Include="Entities\Countries\Country.cs" />
+    <Compile Include="Entities\Customers\Customer.cs" />
+    <Compile Include="Entities\Customers\CustomersAddress.cs" />
+    <Compile Include="Entities\Coupons\Coupon.cs" />
+    <Compile Include="Entities\Utilities\Error.cs" />
+    <Compile Include="Entities\Utilities\ErrorDetails.cs" />
+    <Compile Include="Entities\IEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Options\Option.cs" />
+    <Compile Include="Entities\Options\OptionValue.cs" />
+    <Compile Include="Entities\Orders\Order.cs" />
+    <Compile Include="Entities\Orders\OrdersCoupon.cs" />
+    <Compile Include="Entities\Orders\OrdersProduct.cs" />
+    <Compile Include="Entities\Orders\OrdersProductsConfigurableField.cs" />
+    <Compile Include="Entities\Orders\OrdersProductsDiscount.cs" />
+    <Compile Include="Entities\Orders\OrdersProductsOption.cs" />
+    <Compile Include="Entities\Orders\OrdersShipment.cs" />
+    <Compile Include="Entities\Orders\OrdersShipmentItem.cs" />
+    <Compile Include="Entities\Orders\OrdersShippingAddress.cs" />
+    <Compile Include="Entities\Orders\OrderStatus.cs" />
+    <Compile Include="Entities\Options\OptionSet.cs" />
+    <Compile Include="Entities\Options\OptionSetOption.cs" />
+    <Compile Include="Entities\Products\Product.cs" />
+    <Compile Include="Entities\Products\ProductsDiscountRule.cs" />
+    <Compile Include="Entities\Products\ProductsConfigurableField.cs" />
+    <Compile Include="Entities\Products\ProductsCustomField.cs" />
+    <Compile Include="Entities\Products\ProductsImage.cs" />
+    <Compile Include="Entities\Products\ProductsOption.cs" />
+    <Compile Include="Entities\Products\ProductsRule.cs" />
+    <Compile Include="Entities\Products\ProductsRuleAdjuster.cs" />
+    <Compile Include="Entities\Products\ProductsRuleConditionField.cs" />
+    <Compile Include="Entities\Products\ProductsSku.cs" />
+    <Compile Include="Entities\Products\ProductsSkuOption.cs" />
+    <Compile Include="Entities\Products\ProductsVideo.cs" />
+    <Compile Include="Entities\Utilities\HttpOptions.cs" />
+    <Compile Include="Entities\Utilities\HttpOptionsFields.cs" />
+    <Compile Include="Entities\Utilities\RequestLog.cs" />
+    <Compile Include="Entities\Common\Resource.cs" />
+    <Compile Include="Entities\Countries\State.cs" />
+    <Compile Include="Entities\Orders\ShippingMethod.cs" />
+    <Compile Include="Entities\Utilities\ServerDateTime.cs" />
+    <Compile Include="Enumerations\CouponType.cs" />
+    <Compile Include="Enumerations\OptionType.cs" />
+    <Compile Include="Enumerations\OrderProductsType.cs" />
+    <Compile Include="Enumerations\PaymentStatus.cs" />
+    <Compile Include="Enumerations\ProductRuleAdjusterRule.cs" />
+    <Compile Include="Enumerations\ProductsAvailability.cs" />
+    <Compile Include="Enumerations\ProductsCondition.cs" />
+    <Compile Include="Enumerations\ProductsConfigurableFieldType.cs" />
+    <Compile Include="Enumerations\ProductsDiscountType.cs" />
+    <Compile Include="Enumerations\ProductsEventDateType.cs" />
+    <Compile Include="Enumerations\ProductsInventoryTracking.cs" />
+    <Compile Include="Enumerations\ProductsOpenGraphType.cs" />
+    <Compile Include="Enumerations\ProductsOptionSetDisplay.cs" />
+    <Compile Include="Enumerations\ProductsType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ExtensionMethods\MyExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
