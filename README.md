@@ -39,7 +39,7 @@ Api_Configuration = new Api.Configuration() {
                 AllowDeletions = true // Is false by default, must be true to allow deletions
             };
             
-Client = new Api.Client(this.Api_Configuration);
+Client = new Api.Client(Api_Configuration);
             
 ```
 
@@ -77,7 +77,7 @@ Updating Store Data
 var updatedata = new { store_credit = 2500M };
 
             var response = Client.Customers.Update(100, updatedata);	
-Assert.AreNotEqual(null, response.Data);
+	    Assert.AreNotEqual(null, response.Data);
             Assert.AreEqual(100, response.Data.Id);
             Assert.AreEqual(2500M, response.Data.StoreCredit);			
 ```
@@ -86,17 +86,17 @@ Create Store Data
 -------------
 ```	
 var customer = new { 
-						first_name = "FirstName",
-						last_name = "LastName",
-						email = "email@email.com"
- 					};
+			first_name = "FirstName",
+			last_name = "LastName",
+			email = "email@email.com"
+		};
 
-            var response = Client.Customers.Create(customer);
-			Assert.AreEqual(response.RestResponse.StatusCode, System.Net.HttpStatusCode.Created);			
-			Assert.AreNotEqual(null, response.Data);
-            Assert.AreEqual("FirstName", response.Data.FirstName);
-			Assert.AreEqual("LastName", response.Data.LastName);	
-			Assert.AreEqual(""email@email.com"", response.Data.Email);			
+var response = Client.Customers.Create(customer);
+Assert.AreEqual(response.RestResponse.StatusCode, System.Net.HttpStatusCode.Created);			
+Assert.AreNotEqual(null, response.Data);
+Assert.AreEqual("FirstName", response.Data.FirstName);
+Assert.AreEqual("LastName", response.Data.LastName);	
+Assert.AreEqual(""email@email.com"", response.Data.Email);			
 			
 ```
 
