@@ -43,7 +43,7 @@ namespace BigCommerce4Net.Api_Tests
         [SetUp]
         public void SetupContext() {
             Api_Configuration = new Api.Configuration() {
-                ServiceURL = "https://rcworst.com/api/v2",
+                ServiceURL = "https://--yourstore--/api/v2",
                 UserName = "--Your User Name--",
                 UserApiKey = "--Your Api Key--",
                 MaxPageLimit = 250
