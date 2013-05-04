@@ -94,7 +94,8 @@
     <Compile Include="Entities\Utilities\ServerDateTime.cs" />
     <Compile Include="Enumerations\CouponType.cs" />
     <Compile Include="Enumerations\OptionType.cs" />
-    <Compile Include="Enumerations\OrderProductsType.cs" />
+    <Compile Include="Enumerations\OrdersCouponType.cs" />
+    <Compile Include="Enumerations\OrdersProductsType.cs" />
     <Compile Include="Enumerations\PaymentStatus.cs" />
     <Compile Include="Enumerations\ProductRuleAdjusterRule.cs" />
     <Compile Include="Enumerations\ProductsAvailability.cs" />

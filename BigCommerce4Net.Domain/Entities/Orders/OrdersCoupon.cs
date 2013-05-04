@@ -58,7 +58,6 @@ namespace BigCommerce4Net.Domain
         [JsonProperty("amount")]
         public virtual decimal CouponAmount { get; set; }
 
-        //TODO: Look and adding enum type for this, will have to look at xml to see what BC is sending
         /// <summary>
         /// The type of coupon which is one of the following int values:
         ///
@@ -69,7 +68,7 @@ namespace BigCommerce4Net.Domain
         /// 4 - Free shipping
         /// </summary>
         [JsonProperty("type")]
-        public virtual string CouponType { get; set; }
+        public virtual OrdersCouponType CouponType { get; set; }
 
         [JsonProperty("discount")]
         public virtual decimal Discount { get; set; }

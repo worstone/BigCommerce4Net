@@ -24,7 +24,7 @@ using Newtonsoft.Json.Converters;
 namespace BigCommerce4Net.Domain
 {
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum OrderProductsType
+    public enum OrdersProductsType
     {
         [EnumMember(Value = "physical")]
         Physical = 0,

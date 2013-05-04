@@ -55,7 +55,7 @@ namespace BigCommerce4Net.Domain
         /// giftcertificate
         /// </summary>
         [JsonProperty("type")]
-        public virtual OrderProductsType ProductType { get; set; }
+        public virtual OrdersProductsType ProductType { get; set; }
 
         /// <summary>
         /// The base price of the product as entered by the store owner. 
@@ -306,7 +306,6 @@ namespace BigCommerce4Net.Domain
         [JsonProperty("ebay_item_id")]
         public virtual string EbayItemId { get; set; }
 
-        //TODO: Add to Nhibernate Mapping
         /// <summary>
         /// A list of discounts (such as from Coupons or Discount Rules) applied to this product. 
         /// See the Product Discounts section below for a definition of this object.

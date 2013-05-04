@@ -20,6 +20,8 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 using Api = BigCommerce4Net.Api;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace BigCommerce4Net.Api_Tests
 {
@@ -37,17 +39,57 @@ namespace BigCommerce4Net.Api_Tests
         [SetUp]
         public void SetClient() {
             Client = new Api.Client(this.Api_Configuration);
-
         }
 
         [SetUp]
         public void SetupContext() {
+
+            var settings = LoadJson();
+
             Api_Configuration = new Api.Configuration() {
-                ServiceURL = "https://--yourstore--/api/v2",
-                UserName = "--Your User Name--",
-                UserApiKey = "--Your Api Key--",
-                MaxPageLimit = 250
+                ServiceURL = settings.ServiceURL,
+                UserName = settings.UserName,
+                UserApiKey = settings.UserApiKey
             };
+
         }
+        private TestSettings LoadJson() {
+
+            TestSettings settings = null;
+
+            if (File.Exists("TEST_SETTINGS.json")) {
+
+                using (StreamReader r = new StreamReader("TEST_SETTINGS.json")) {
+                    string json = r.ReadToEnd();
+                    settings = JsonConvert.DeserializeObject<TestSettings>(json);
+                }
+            } else {
+
+                settings = new TestSettings {
+                    ServiceURL = "https://--yourstore--/api/v2",
+                    UserName = "--Your User Name--",
+                    UserApiKey = "--Your Api Key--"
+                };
+            }
+
+            //      Just add the file "TEST_SETTINGS.json" to your project, with your settings in the json below, set copy to output and you should be good to go.
+
+            //      {
+            //          'ServiceURL': 'https://--yourstore--/api/v2',
+            //          'UserName': '--Your User Name--',
+            //          'UserApiKey': '--Your Api Key--'
+            //      }
+
+            //      *** Just make sure TEST_SETTINGS.json is in your .gitignore file ***
+
+            return settings;
+        }
+    }
+
+    public class TestSettings
+    {
+        public string ServiceURL { get; set; }
+        public string UserName { get; set; }
+        public string UserApiKey { get; set; }
     }
 }

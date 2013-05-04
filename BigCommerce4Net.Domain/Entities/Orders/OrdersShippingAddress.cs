@@ -203,7 +203,6 @@ namespace BigCommerce4Net.Domain
         [JsonProperty("handling_cost_ex_tax")]
         public virtual decimal HandlingCostExcludingTax { get; set; }
 
-        //TODO: Need to look at xml and confirm field name
         /// <summary>
         /// The handling cost including tax. 
         /// 
