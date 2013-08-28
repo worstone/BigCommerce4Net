@@ -72,11 +72,11 @@ namespace BigCommerce4Net.Api.ResourceClients
         }
 
         public IClientResponse<ProductsImage> Create(int id, string json) {
-            string resourceEndpoint = "/products/images";
+            string resourceEndpoint = string.Format("/products/{0}/images", id);
             return base.PostData<ProductsImage>(resourceEndpoint, json);
         }
         public IClientResponse<ProductsImage> Create(int id, object obj) {
-            string resourceEndpoint = "/products/images";
+            string resourceEndpoint = string.Format("/products/{0}/images", id);
             return base.PostData<ProductsImage>(resourceEndpoint, obj.SerializeObject());
         }
 
