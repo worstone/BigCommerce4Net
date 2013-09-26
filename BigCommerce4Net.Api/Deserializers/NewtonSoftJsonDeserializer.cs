@@ -42,12 +42,15 @@ namespace BigCommerce4Net.Api.Deserializers
             if (response.StatusCode == System.Net.HttpStatusCode.OK ||
                 response.StatusCode == System.Net.HttpStatusCode.Created ||
                 response.StatusCode == System.Net.HttpStatusCode.Accepted ||
-                response.StatusCode == System.Net.HttpStatusCode.NoContent)
-            {
+                response.StatusCode == System.Net.HttpStatusCode.NoContent) {
                 try {
                     return JsonConvert.DeserializeObject<T>(response.Content);
                 } catch (JsonSerializationException ex) {
-                    log.Warn("Trouble with NewtonSoftJsonDeserializer", ex);
+                    log.ErrorFormat("NewtonSoftJsonDeserializer | {0}", response.ResponseUri, ex);
+                    log.ErrorFormat("NewtonSoftJsonDeserializer InnerException | {0}",
+                        response.ResponseUri, (ex.InnerException != null ? ex.InnerException.Message : ""));
+                    log.ErrorFormat("Response.Content | {0}", response.Content, ex);
+                    throw new NewtonSoftJsonDeserializerException(ex.Message) { RestResponse = response };
                 }
             }
             return default(T);

@@ -24,7 +24,7 @@ namespace BigCommerce4Net.Api
 {
     public class Filter : IFilter
     {
-        protected const string RFC2822_DATE_FORMAT = "{0:ddd, dd MMM yyyy hh:mm:ss zz00}";
+        protected const string RFC2822_DATE_FORMAT = "{0:ddd, dd MMM yyyy HH:mm:ss} GMT";
         
         /// <summary>
         /// How many results you'd like returned by providing a 
