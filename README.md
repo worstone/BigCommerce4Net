@@ -8,10 +8,10 @@ Requirements
 ------------
 
 - .NET Framwork 4 - http://msdn.microsoft.com/en-US/vstudio/aa496123.aspx
-- log4net.2.0.0 - http://logging.apache.org/log4net/
-- Newtonsoft.Json.5.0.3 - http://james.newtonking.com/projects/json-net.aspx
-- NUnit.2.6.2 - http://nunit.org/
-- RestSharp.104.1 - http://restsharp.org/
+- log4net - http://logging.apache.org/log4net/
+- Newtonsoft.Json - http://james.newtonking.com/projects/json-net.aspx
+- NUnit - http://nunit.org/
+- RestSharp - http://restsharp.org/
 
 To connect to the API, you need the following credentials:
 
