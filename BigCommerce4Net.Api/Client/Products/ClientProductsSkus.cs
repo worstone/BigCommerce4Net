@@ -44,7 +44,7 @@ namespace BigCommerce4Net.Api.ResourceClients
             return base.GetData<List<ProductsSku>>(resourceEndpoint);
         }
         public IClientResponse<ProductsSku> Get(int productId, int skuId) {
-            string resourceEndpoint = string.Format("/products/{0}/skus/{0}", productId, skuId);
+            string resourceEndpoint = string.Format("/products/{0}/skus/{1}", productId, skuId);
             return base.GetData<ProductsSku>(resourceEndpoint);
         }
         public IClientResponse<List<ProductsSku>> Get(string resourceEndPoint) {
