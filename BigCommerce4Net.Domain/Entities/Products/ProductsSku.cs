@@ -93,6 +93,6 @@ namespace BigCommerce4Net.Domain
         /// object
         /// </summary>
         [JsonProperty("options")]
-        public virtual ProductsSkuOption Options { get; set; }
+        public virtual List<ProductsSkuOption Options> { get; set; }
     }
 }
