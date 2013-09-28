@@ -39,7 +39,7 @@ Api_Configuration = new Api.Configuration() {
                 AllowDeletions = true // Is false by default, must be true to allow deletions
             };
             
-Client = new Api.Client(Api_Configuration);
+var Client = new Api.Client(Api_Configuration);
             
 ```
 
