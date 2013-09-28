@@ -82,7 +82,7 @@ namespace BigCommerce4Net.Api.ResourceClients
             return base.GetHttpOptionsData<HttpOptions>(resourceEndpoint);
         }
         public IClientResponse<HttpOptions> GetHttpOptions(int productId, int skuId) {
-            string resourceEndpoint = string.Format("/products/{0}/skus/{0}", productId, skuId);
+            string resourceEndpoint = string.Format("/products/{0}/skus/{1}", productId, skuId);
             return base.GetHttpOptionsData<HttpOptions>(resourceEndpoint);
         }
 

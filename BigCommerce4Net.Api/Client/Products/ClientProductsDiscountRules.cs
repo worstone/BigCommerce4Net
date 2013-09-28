@@ -47,7 +47,7 @@ namespace BigCommerce4Net.Api.ResourceClients
             return base.GetData<List<ProductsDiscountRule>>(resourceEndpoint);
         }
         public IClientResponse<ProductsDiscountRule> Get(int productid, int rulesId) {
-            string resourceEndpoint = string.Format("/products/{0}/discountrules/{0}", productid, rulesId);
+            string resourceEndpoint = string.Format("/products/{0}/discountrules/{1}", productid, rulesId);
             return base.GetData<ProductsDiscountRule>(resourceEndpoint);
         }
         public IClientResponse<List<ProductsDiscountRule>> Get(string resourceEndPoint) {
@@ -62,7 +62,7 @@ namespace BigCommerce4Net.Api.ResourceClients
             return base.GetHttpOptionsData<HttpOptions>(resourceEndpoint);
         }
         public IClientResponse<HttpOptions> GetHttpOptions(int productid, int rulesId) {
-            string resourceEndpoint = string.Format("/products/{0}/discountrules/{0}", productid, rulesId);
+            string resourceEndpoint = string.Format("/products/{0}/discountrules/{1}", productid, rulesId);
             return base.GetHttpOptionsData<HttpOptions>(resourceEndpoint);
         }
 

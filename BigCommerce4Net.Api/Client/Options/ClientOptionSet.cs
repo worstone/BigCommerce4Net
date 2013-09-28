@@ -65,11 +65,11 @@ namespace BigCommerce4Net.Api.ResourceClients
         }
 
         public IClientResponse<OptionSet> Update(int id, string json) {
-            string resourceEndpoint = string.Format("/optionsets/{id}", id);
+            string resourceEndpoint = string.Format("/optionsets/{0}", id);
             return base.PutData<OptionSet>(resourceEndpoint, json);
         }
         public IClientResponse<OptionSet> Update(int id, object obj) {
-            string resourceEndpoint = string.Format("/optionsets/{id}", id);
+            string resourceEndpoint = string.Format("/optionsets/{0}", id);
             return base.PutData<OptionSet>(resourceEndpoint, obj.SerializeObject());
         }
 

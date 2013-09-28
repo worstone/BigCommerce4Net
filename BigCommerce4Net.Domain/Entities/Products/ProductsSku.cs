@@ -23,6 +23,10 @@ namespace BigCommerce4Net.Domain
 {
     public class ProductsSku : EntityBase
     {
+        public ProductsSku() {
+            Options = new List<ProductsSkuOption>();
+        }
+
         /// <summary>
         /// The unique numerical ID of the SKU.
         /// 
@@ -93,6 +97,6 @@ namespace BigCommerce4Net.Domain
         /// object
         /// </summary>
         [JsonProperty("options")]
-        public virtual List<ProductsSkuOption Options> { get; set; }
+        public virtual IList<ProductsSkuOption> Options { get; set; }
     }
 }
