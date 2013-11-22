@@ -14,10 +14,7 @@
 //   limitations under the License. 
 #endregion
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using BigCommerce4Net.Domain;
 using BigCommerce4Net.Api.ExtensionMethods;
 
@@ -60,12 +57,12 @@ namespace BigCommerce4Net.Api.ResourceClients
             return base.GetData<List<Customer>>(resourceEndPoint, filter);
         }
 
-        public IClientResponse<Customer> Update(int Id, string json) {
-            string resourceEndpoint = string.Format("/customers/{0}", Id);
+        public IClientResponse<Customer> Update(int id, string json) {
+            string resourceEndpoint = string.Format("/customers/{0}", id);
             return base.PutData<Customer>(resourceEndpoint, json);
         }
-        public IClientResponse<Customer> Update(int Id, object obj) {
-            string resourceEndpoint = string.Format("/customers/{0}", Id);
+        public IClientResponse<Customer> Update(int id, object obj) {
+            string resourceEndpoint = string.Format("/customers/{0}", id);
             return base.PutData<Customer>(resourceEndpoint, obj.SerializeObject());
         }
 
@@ -78,8 +75,8 @@ namespace BigCommerce4Net.Api.ResourceClients
             return base.PostData<Customer>(resourceEndpoint, obj.SerializeObject());
         }
 
-        public IClientResponse<bool> Delete(int Id) {
-            string resourceEndpoint = string.Format("/customers/{0}", Id);
+        public IClientResponse<bool> Delete(int id) {
+            string resourceEndpoint = string.Format("/customers/{0}", id);
             return base.DeleteData(resourceEndpoint);
         }
 

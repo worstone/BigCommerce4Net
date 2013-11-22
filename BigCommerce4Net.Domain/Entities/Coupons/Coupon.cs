@@ -15,8 +15,6 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using Newtonsoft.Json;
 using BigCommerce4Net.Domain.ExtensionMethods;
 

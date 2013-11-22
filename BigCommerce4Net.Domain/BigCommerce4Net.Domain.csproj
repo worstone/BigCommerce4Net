@@ -46,6 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Common\Address.cs" />
+    <Compile Include="Entities\CustomerGroups\CustomerGroup.cs" />
+    <Compile Include="Entities\CustomerGroups\CustomerGroupCategoryAccess.cs" />
+    <Compile Include="Entities\CustomerGroups\CustomerGroupDiscountRule.cs" />
     <Compile Include="Entities\EntityBase.cs" />
     <Compile Include="Entities\Common\Brand.cs" />
     <Compile Include="Entities\Common\Category.cs" />
@@ -93,6 +96,9 @@
     <Compile Include="Entities\Orders\ShippingMethod.cs" />
     <Compile Include="Entities\Utilities\ServerDateTime.cs" />
     <Compile Include="Enumerations\CouponType.cs" />
+    <Compile Include="Enumerations\CustomerGroupsCategoryAccessType.cs" />
+    <Compile Include="Enumerations\CustomerGroupsDiscountRulesMethod.cs" />
+    <Compile Include="Enumerations\CustomerGroupsDiscountRulesType.cs" />
     <Compile Include="Enumerations\OptionType.cs" />
     <Compile Include="Enumerations\OrdersCouponType.cs" />
     <Compile Include="Enumerations\OrdersProductsType.cs" />

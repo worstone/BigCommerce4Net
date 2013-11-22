@@ -14,10 +14,8 @@
 //   limitations under the License. 
 #endregion
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using BigCommerce4Net.Api.ExtensionMethods;
 using BigCommerce4Net.Domain;
 
 namespace BigCommerce4Net.Api.ResourceClients
@@ -60,6 +58,17 @@ namespace BigCommerce4Net.Api.ResourceClients
         public IClientResponse<HttpOptions> GetHttpOptions(int productid, int fieldId) {
             string resourceEndpoint = string.Format("/products/{0}/customfields/{1}", productid, fieldId);
             return base.GetHttpOptionsData<HttpOptions>(resourceEndpoint);
+        }
+
+        public IClientResponse<ProductsCustomField> Create(int productid, string json)
+        {
+            string resourceEndpoint = string.Format("/products/{0}/customfields", productid);
+            return base.PostData<ProductsCustomField>(resourceEndpoint, json);
+        }
+        public IClientResponse<ProductsCustomField> Create(int productid, object obj)
+        {
+            string resourceEndpoint = string.Format("/products/{0}/customfields", productid);
+            return base.PostData<ProductsCustomField>(resourceEndpoint, obj.SerializeObject());
         }
 
 

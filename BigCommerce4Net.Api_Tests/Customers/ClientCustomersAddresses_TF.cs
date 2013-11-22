@@ -14,14 +14,7 @@
 //   limitations under the License. 
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using NUnit.Framework;
-using Api = BigCommerce4Net.Api;
-using Domain = BigCommerce4Net.Domain;
-using BigCommerce4Net.Domain;
-using Newtonsoft.Json;
 
 namespace BigCommerce4Net.Api_Tests.Customers
 {

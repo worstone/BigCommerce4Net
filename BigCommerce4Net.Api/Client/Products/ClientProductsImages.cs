@@ -14,111 +14,134 @@
 //   limitations under the License. 
 #endregion
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using BigCommerce4Net.Domain;
 using BigCommerce4Net.Api.ExtensionMethods;
 
 namespace BigCommerce4Net.Api.ResourceClients
 {
-    public class ClientProductsImages : 
-        ClientBase, 
+    public class ClientProductsImages :
+        ClientBase,
         IChildResourceGetUpdateDeleteCreate<ProductsImage>,
         IChildResourceCount
     {
         public ClientProductsImages(Configuration configuration)
             : base(configuration) { }
 
-        public IClientResponse<ItemCount> Count(int productid) {
+        public IClientResponse<ItemCount> Count(int productid)
+        {
             string resourceEndpoint = string.Format("/products/{0}/images/count", productid);
             return base.Count<ItemCount>(resourceEndpoint);
         }
-        public IClientResponse<ItemCount> Count(int productid, IFilter filter) {
+        public IClientResponse<ItemCount> Count(int productid, IFilter filter)
+        {
             string resourceEndpoint = string.Format("/products/{0}/images/count", productid);
             return base.Count<ItemCount>(resourceEndpoint, filter);
         }
-        public IClientResponse<List<ProductsImage>> Get() {
+        public IClientResponse<List<ProductsImage>> Get()
+        {
             string resourceEndpoint = string.Format("/products/images");
             return base.GetData<List<ProductsImage>>(resourceEndpoint);
         }
-        public IClientResponse<List<ProductsImage>> Get(IFilter filter) {
+        public IClientResponse<List<ProductsImage>> Get(IFilter filter)
+        {
             string resourceEndpoint = string.Format("/products/images");
             return base.GetData<List<ProductsImage>>(resourceEndpoint, filter);
         }
-        public IClientResponse<List<ProductsImage>> Get(int productid) {
+        public IClientResponse<List<ProductsImage>> Get(int productid)
+        {
             string resourceEndpoint = string.Format("/products/{0}/images", productid);
             return base.GetData<List<ProductsImage>>(resourceEndpoint);
         }
-        public IClientResponse<ProductsImage> Get(int productid, int imageid) {
+        public IClientResponse<ProductsImage> Get(int productid, int imageid)
+        {
             string resourceEndpoint = string.Format("/products/{0}/images/{1}", productid, imageid);
             return base.GetData<ProductsImage>(resourceEndpoint);
         }
-        public IClientResponse<List<ProductsImage>> Get(string resourceEndPoint) {
+        public IClientResponse<List<ProductsImage>> Get(string resourceEndPoint)
+        {
             return base.GetData<List<ProductsImage>>(resourceEndPoint);
         }
-        public IClientResponse<List<ProductsImage>> Get(string resourceEndPoint, IFilter filter) {
+        public IClientResponse<List<ProductsImage>> Get(string resourceEndPoint, IFilter filter)
+        {
             return base.GetData<List<ProductsImage>>(resourceEndPoint, filter);
         }
 
-        public IClientResponse<ProductsImage> Update(int productid, int imageid, string json) {
+        public IClientResponse<ProductsImage> Update(int productid, int imageid, string json)
+        {
             string resourceEndpoint = string.Format("/products/{0}/images/{1}", productid, imageid);
             return base.PutData<ProductsImage>(resourceEndpoint, json);
         }
-        public IClientResponse<ProductsImage> Update(int productid, int imageid, object obj) {
+        public IClientResponse<ProductsImage> Update(int productid, int imageid, object obj)
+        {
             string resourceEndpoint = string.Format("/products/{0}/images/{1}", productid, imageid);
             return base.PutData<ProductsImage>(resourceEndpoint, obj.SerializeObject());
         }
 
-        public IClientResponse<ProductsImage> Create(int id, string json) {
+        public IClientResponse<ProductsImage> Create(int id, string json)
+        {
             string resourceEndpoint = string.Format("/products/{0}/images", id);
             return base.PostData<ProductsImage>(resourceEndpoint, json);
         }
-        public IClientResponse<ProductsImage> Create(int id, object obj) {
+        public IClientResponse<ProductsImage> Create(int id, object obj)
+        {
             string resourceEndpoint = string.Format("/products/{0}/images", id);
             return base.PostData<ProductsImage>(resourceEndpoint, obj.SerializeObject());
         }
 
-        public IClientResponse<bool> Delete(int productid, int imageid) {
+        public IClientResponse<bool> Delete(int productid, int imageid)
+        {
             string resourceEndpoint = string.Format("/products/{0}/images/{1}", productid, imageid);
             return base.DeleteData(resourceEndpoint);
         }
 
-        public IClientResponse<HttpOptions> GetHttpOptions(int productid) {
+        public IClientResponse<HttpOptions> GetHttpOptions(int productid)
+        {
             string resourceEndpoint = string.Format("/products/{0}/images", productid);
             return base.GetHttpOptionsData<HttpOptions>(resourceEndpoint);
         }
-        public IClientResponse<HttpOptions> GetHttpOptions(int productid, int imageid) {
-            string resourceEndpoint = string.Format("/products/{0}/images/{1}", productid, imageid); 
+        public IClientResponse<HttpOptions> GetHttpOptions(int productid, int imageid)
+        {
+            string resourceEndpoint = string.Format("/products/{0}/images/{1}", productid, imageid);
             return base.GetHttpOptionsData<HttpOptions>(resourceEndpoint);
         }
 
-        public void Get(IList<Product> items) {
-            foreach (var item in items) {
+        public void Get(IList<Product> items)
+        {
+            foreach (var item in items)
+            {
                 var response = this.Get(item.Id);
 
                 if (response.RestResponse.StatusCode == System.Net.HttpStatusCode.OK &&
-                    response.Data != null && response.Data != null) {
-                    foreach (var xitem in response.Data) {
+                    response.Data != null && response.Data != null)
+                {
+                    foreach (var xitem in response.Data)
+                    {
                         item.Images.Add(xitem);
                     }
                     ShowIdAndApiLimit(item.Id, response.RestResponse);
-                } else {
+                }
+                else
+                {
                     StatusCodeLogging(response.RestResponse, GetType());
                 }
             }
         }
-        public void Get(Product item) {
+        public void Get(Product item)
+        {
             var response = this.Get(item.Id);
 
             if (response.RestResponse.StatusCode == System.Net.HttpStatusCode.OK &&
-                response.Data != null && response.Data != null) {
-                foreach (var xitem in response.Data) {
+                response.Data != null && response.Data != null)
+            {
+                foreach (var xitem in response.Data)
+                {
                     item.Images.Add(xitem);
                 }
                 ShowIdAndApiLimit(item.Id, response.RestResponse);
-            } else {
+            }
+            else
+            {
                 StatusCodeLogging(response.RestResponse, GetType());
             }
         }

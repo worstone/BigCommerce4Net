@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigCommerce4Net.Api", "BigCommerce4Net.Api\BigCommerce4Net.Api.csproj", "{DAD102C5-A4DC-4C60-AF60-5777B051C386}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigCommerce4Net.Domain", "BigCommerce4Net.Domain\BigCommerce4Net.Domain.csproj", "{0A8B96C4-4FBE-4772-84AA-0B3D023F2E21}"
@@ -17,21 +17,43 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{DAD102C5-A4DC-4C60-AF60-5777B051C386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DAD102C5-A4DC-4C60-AF60-5777B051C386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD102C5-A4DC-4C60-AF60-5777B051C386}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DAD102C5-A4DC-4C60-AF60-5777B051C386}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DAD102C5-A4DC-4C60-AF60-5777B051C386}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{DAD102C5-A4DC-4C60-AF60-5777B051C386}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAD102C5-A4DC-4C60-AF60-5777B051C386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAD102C5-A4DC-4C60-AF60-5777B051C386}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DAD102C5-A4DC-4C60-AF60-5777B051C386}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DAD102C5-A4DC-4C60-AF60-5777B051C386}.Release|x86.ActiveCfg = Release|Any CPU
 		{0A8B96C4-4FBE-4772-84AA-0B3D023F2E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0A8B96C4-4FBE-4772-84AA-0B3D023F2E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A8B96C4-4FBE-4772-84AA-0B3D023F2E21}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0A8B96C4-4FBE-4772-84AA-0B3D023F2E21}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0A8B96C4-4FBE-4772-84AA-0B3D023F2E21}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{0A8B96C4-4FBE-4772-84AA-0B3D023F2E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A8B96C4-4FBE-4772-84AA-0B3D023F2E21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A8B96C4-4FBE-4772-84AA-0B3D023F2E21}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0A8B96C4-4FBE-4772-84AA-0B3D023F2E21}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0A8B96C4-4FBE-4772-84AA-0B3D023F2E21}.Release|x86.ActiveCfg = Release|Any CPU
 		{BAD78EB0-9136-4662-9719-D6084F1B0197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BAD78EB0-9136-4662-9719-D6084F1B0197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAD78EB0-9136-4662-9719-D6084F1B0197}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BAD78EB0-9136-4662-9719-D6084F1B0197}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BAD78EB0-9136-4662-9719-D6084F1B0197}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{BAD78EB0-9136-4662-9719-D6084F1B0197}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAD78EB0-9136-4662-9719-D6084F1B0197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAD78EB0-9136-4662-9719-D6084F1B0197}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BAD78EB0-9136-4662-9719-D6084F1B0197}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BAD78EB0-9136-4662-9719-D6084F1B0197}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

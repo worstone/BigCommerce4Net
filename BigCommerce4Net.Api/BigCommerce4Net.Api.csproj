@@ -53,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client\Client.cs" />
+    <Compile Include="Client\CustomerGroups\ClientCustomerGroups.cs" />
+    <Compile Include="Filters\CustomerGroups\FilterCustomerGroups.cs" />
     <Compile Include="Interfaces\IChildResourceGet.cs" />
     <Compile Include="Interfaces\IChildResourceGetUpdate.cs" />
     <Compile Include="Interfaces\IChildResourceGetUpdateDelete.cs" />

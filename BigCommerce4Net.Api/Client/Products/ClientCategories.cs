@@ -14,10 +14,7 @@
 //   limitations under the License. 
 #endregion
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using BigCommerce4Net.Domain;
 using BigCommerce4Net.Api.ExtensionMethods;
 
@@ -92,11 +89,11 @@ namespace BigCommerce4Net.Api.ResourceClients
             return base.GetHttpOptionsData<HttpOptions>(resourceEndpoint);
         }
 
-
         public IList<Category> GetList() {
             var filter = new FilterCategories();
             return GetList(filter);
         }
+
         public IList<Category> GetList(IFilter filter) {
             var items = base.RecordPaging<Category>(filter, this);
             return items;

@@ -14,15 +14,8 @@
 //   limitations under the License. 
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using RestSharp.Deserializers;
 using RestSharp;
-using System.Xml.Linq;
-using System.Xml.Serialization;
-using System.IO;
-using System.Text;
 using Newtonsoft.Json;
 
 namespace BigCommerce4Net.Api.Deserializers

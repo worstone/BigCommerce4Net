@@ -14,9 +14,6 @@
 //   limitations under the License. 
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using BigCommerce4Net.Api.ResourceClients;
 
 namespace BigCommerce4Net.Api
@@ -93,6 +90,19 @@ namespace BigCommerce4Net.Api
                 return _Customers;
             }
         }
+
+        private ClientCustomerGroups _CustomerGroups;
+
+        public ClientCustomerGroups CustomerGroups
+        {
+            get
+            {
+                if (_CustomerGroups == null)
+                    _CustomerGroups = new ClientCustomerGroups(_Configuration);
+                return _CustomerGroups;
+            }
+        }
+
         private ClientCustomersAddresses _CustomersAddresses;
         public ClientCustomersAddresses CustomersAddresses {
             get {

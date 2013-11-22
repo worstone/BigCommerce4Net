@@ -15,11 +15,7 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using NUnit.Framework;
-using Api = BigCommerce4Net.Api;
-using Domain = BigCommerce4Net.Domain;
 
 namespace BigCommerce4Net.Api_Tests.Products
 {

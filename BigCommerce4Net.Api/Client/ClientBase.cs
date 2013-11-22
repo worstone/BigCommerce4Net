@@ -17,7 +17,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using RestSharp;
 using Newtonsoft.Json;
 
@@ -166,7 +165,7 @@ namespace BigCommerce4Net.Api
             
             try {
                 response.ResponseErrors = JsonConvert.DeserializeObject<List<Domain.Error>>(response.RestResponse.Content);
-            } catch (JsonSerializationException ex) {
+            } catch (Exception ex) {
                 log.Warn("Trouble Deserialize Error Object", ex);
                 throw;
             }
