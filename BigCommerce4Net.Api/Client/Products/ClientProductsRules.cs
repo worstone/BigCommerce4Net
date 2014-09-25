@@ -20,11 +20,11 @@ using System.Linq;
 using System.Text;
 using BigCommerce4Net.Domain;
 using BigCommerce4Net.Api.ExtensionMethods;
-
+// modified by KD
 namespace BigCommerce4Net.Api.ResourceClients
 {
-    public class ClientProductsRules : 
-        ClientBase, 
+    public class ClientProductsRules :
+        ClientBase,
         IChildResourceGetUpdateDeleteCreate<ProductsRule>,
         IChildResourceCount
     {
@@ -32,19 +32,19 @@ namespace BigCommerce4Net.Api.ResourceClients
             : base(configuration) { }
 
         public IClientResponse<ItemCount> Count(int productid) {
-            string resourceEndpoint = string.Format("/product/{0}/rules/count", productid);
+            string resourceEndpoint = string.Format("/products/{0}/rules/count", productid);
             return base.Count<ItemCount>(resourceEndpoint);
         }
         public IClientResponse<ItemCount> Count(int productid, IFilter filter) {
-            string resourceEndpoint = string.Format("/product/{0}/rules/count", productid);
+            string resourceEndpoint = string.Format("/products/{0}/rules/count", productid);
             return base.Count<ItemCount>(resourceEndpoint, filter);
         }
         public IClientResponse<List<ProductsRule>> Get(int productid) {
-            string resourceEndpoint = string.Format("/product/{0}/rules", productid);
+            string resourceEndpoint = string.Format("/products/{0}/rules", productid);
             return base.GetData<List<ProductsRule>>(resourceEndpoint);
         }
         public IClientResponse<ProductsRule> Get(int productId, int ruleId) {
-            string resourceEndpoint = string.Format("/product/{0}/rules/{1}", productId, ruleId);
+            string resourceEndpoint = string.Format("/products/{0}/rules/{1}", productId, ruleId);
             return base.GetData<ProductsRule>(resourceEndpoint);
         }
         public IClientResponse<List<ProductsRule>> Get(string resourceEndPoint) {
@@ -55,34 +55,34 @@ namespace BigCommerce4Net.Api.ResourceClients
         }
 
         public IClientResponse<ProductsRule> Update(int productId, int ruleId, string json) {
-            string resourceEndpoint = string.Format("/product/{0}/rules/{1}", productId, ruleId);
+            string resourceEndpoint = string.Format("/products/{0}/rules/{1}", productId, ruleId);
             return base.PutData<ProductsRule>(resourceEndpoint, json);
         }
         public IClientResponse<ProductsRule> Update(int productId, int ruleId, object obj) {
-            string resourceEndpoint = string.Format("/product/{0}/rules/{1}", productId, ruleId);
+            string resourceEndpoint = string.Format("/products/{0}/rules/{1}", productId, ruleId);
             return base.PutData<ProductsRule>(resourceEndpoint, obj.SerializeObject());
         }
 
         public IClientResponse<ProductsRule> Create(int productId, string json) {
-            string resourceEndpoint = string.Format("/product/{0}/rules", productId);
+            string resourceEndpoint = string.Format("/products/{0}/rules", productId);
             return base.PostData<ProductsRule>(resourceEndpoint, json);
         }
         public IClientResponse<ProductsRule> Create(int productId, object obj) {
-            string resourceEndpoint = string.Format("/product/{0}/rules", productId);
+            string resourceEndpoint = string.Format("/products/{0}/rules", productId);
             return base.PostData<ProductsRule>(resourceEndpoint, obj.SerializeObject());
         }
 
         public IClientResponse<bool> Delete(int productId, int ruleId) {
-            string resourceEndpoint = string.Format("/product/{0}/rules/{1}", productId, ruleId);
+            string resourceEndpoint = string.Format("/products/{0}/rules/{1}", productId, ruleId);
             return base.DeleteData(resourceEndpoint);
         }
 
         public IClientResponse<HttpOptions> GetHttpOptions(int productid) {
-            string resourceEndpoint = string.Format("/product/{0}/rules", productid);
+            string resourceEndpoint = string.Format("/products/{0}/rules", productid);
             return base.GetHttpOptionsData<HttpOptions>(resourceEndpoint);
         }
         public IClientResponse<HttpOptions> GetHttpOptions(int productId, int ruleId) {
-            string resourceEndpoint = string.Format("/product/{0}/rules/{1}", productId, ruleId);
+            string resourceEndpoint = string.Format("/products/{0}/rules/{1}", productId, ruleId);
             return base.GetHttpOptionsData<HttpOptions>(resourceEndpoint);
         }
 

@@ -23,8 +23,8 @@ using BigCommerce4Net.Api.ExtensionMethods;
 
 namespace BigCommerce4Net.Api.ResourceClients
 {
-    public class ClientProductsSkus : 
-        ClientBase, 
+    public class ClientProductsSkus :
+        ClientBase,
         IChildResourceGetUpdateDeleteCreate<ProductsSku>,
         IChildResourceCount
     {
@@ -55,25 +55,25 @@ namespace BigCommerce4Net.Api.ResourceClients
         }
 
         public IClientResponse<ProductsSku> Update(int productId, int skuId, string json) {
-            string resourceEndpoint = string.Format("/product/{0}/skus/{1}", productId, skuId);
+            string resourceEndpoint = string.Format("/products/{0}/skus/{1}", productId, skuId);
             return base.PutData<ProductsSku>(resourceEndpoint, json);
         }
         public IClientResponse<ProductsSku> Update(int productId, int skuId, object obj) {
-            string resourceEndpoint = string.Format("/product/{0}/skus/{1}", productId, skuId);
+            string resourceEndpoint = string.Format("/products/{0}/skus/{1}", productId, skuId);
             return base.PutData<ProductsSku>(resourceEndpoint, obj.SerializeObject());
         }
 
         public IClientResponse<ProductsSku> Create(int productId, string json) {
-            string resourceEndpoint = string.Format("/product/{0}/skus", productId);
+            string resourceEndpoint = string.Format("/products/{0}/skus", productId);
             return base.PostData<ProductsSku>(resourceEndpoint, json);
         }
         public IClientResponse<ProductsSku> Create(int productId, object obj) {
-            string resourceEndpoint = string.Format("/product/{0}/skus", productId);
+            string resourceEndpoint = string.Format("/products/{0}/skus", productId);
             return base.PostData<ProductsSku>(resourceEndpoint, obj.SerializeObject());
         }
 
         public IClientResponse<bool> Delete(int productId, int skuId) {
-            string resourceEndpoint = string.Format("/product/{0}/skus/{1}", productId, skuId);
+            string resourceEndpoint = string.Format("/products/{0}/skus/{1}", productId, skuId);
             return base.DeleteData(resourceEndpoint);
         }
 

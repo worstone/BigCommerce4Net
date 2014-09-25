@@ -23,6 +23,12 @@ namespace BigCommerce4Net.Domain
 {
     public class ProductsRule : EntityBase
     {
+        // Modified by KD
+        public ProductsRule() {
+            Conditions = new List<ProductsRuleConditionField>();
+        }
+
+        //List<ProductsRuleConditionField>
         /// <summary>
         /// The unique ID of the product level rule. 
         /// 
@@ -108,11 +114,19 @@ namespace BigCommerce4Net.Domain
         public virtual bool IsPurchasingHidden { get; set; }
 
         /// <summary>
+        /// The URI to the image used for this sku.
+        /// 
+        /// string(255)
+        /// </summary>
+        [JsonProperty("image_file")]
+        public virtual string ImageFile { get; set; }
+
+        /// <summary>
         ///See the condition fields below for a definition of the object.
         /// 
         /// object
         /// </summary>
         [JsonProperty("conditions")]
-        public virtual ProductsRuleConditionField Conditions { get; set; }
+        public virtual IList<ProductsRuleConditionField> Conditions { get; set; }
     }
 }
