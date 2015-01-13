@@ -38,10 +38,10 @@ namespace BigCommerce4Net.Api_Tests
 
         [SetUp]
         public void SetClient() {
+            SetupContext();
             Client = new Api.Client(this.Api_Configuration);
         }
 
-        [SetUp]
         public void SetupContext() {
 
             var settings = LoadJson();
