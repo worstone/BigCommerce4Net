@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="TEST_SETTINGS.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BigCommerce4Net.Api\BigCommerce4Net.Api.csproj">
@@ -95,11 +96,6 @@
       <Project>{0a8b96c4-4fbe-4772-84aa-0b3d023f2e21}</Project>
       <Name>BigCommerce4Net.Domain</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="TEST_SETTINGS.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
