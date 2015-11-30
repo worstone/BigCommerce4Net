@@ -36,6 +36,9 @@ namespace BigCommerce4Net.Domain
         Before = 2,
 
         [EnumMember(Value = "range")]
-        Range = 3
+        Range = 3,
+                
+        [EnumMember(Value = "required")]
+        Required = 4
     }
 }
