@@ -102,6 +102,6 @@ namespace BigCommerce4Net.Domain
         /// ?string(255)
         /// </summary>
         [JsonProperty("select_box_options")]
-        public virtual string SelectBoxOptions { get; set; }
+        public virtual List<string> SelectBoxOptions { get; set; }
     }
 }
