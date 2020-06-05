@@ -277,6 +277,7 @@ namespace BigCommerce4Net.Domain
         /// captured
         /// refunded
         /// partially
+        /// pending
         /// refunded
         /// voided
         /// </summary>
