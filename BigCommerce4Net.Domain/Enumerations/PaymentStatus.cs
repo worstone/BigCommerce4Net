@@ -42,6 +42,9 @@ namespace BigCommerce4Net.Domain
         PartiallyRefunded = 4,
         
         [EnumMember(Value = "void")]
-        Voided = 5
+        Voided = 5,
+        
+        [EnumMember(Value = "pending")]
+        Pending = 6
     }
 }
